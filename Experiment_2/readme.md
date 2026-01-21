@@ -1,7 +1,7 @@
-# Experiment 1.2 – SQL SELECT Queries with WHERE, GROUP BY, HAVING, ORDER BY
+# Experiment 2 – SQL SELECT Queries with WHERE, GROUP BY, HAVING, ORDER BY
 
 ## Experiment
-Experiment 1.2: Understanding and implementing SQL SELECT queries using WHERE, ORDER BY, GROUP BY, and HAVING clauses to retrieve and manipulate data efficiently from relational database tables.
+Experiment 2: Understanding and implementing SQL SELECT queries using WHERE, ORDER BY, GROUP BY, and HAVING clauses to retrieve and manipulate data efficiently from relational database tables.
 
 ## Aim
 The aim of this experiment is to practice writing SQL SELECT statements with filtering, grouping, sorting, and aggregate functions to analyze data from relational tables.
