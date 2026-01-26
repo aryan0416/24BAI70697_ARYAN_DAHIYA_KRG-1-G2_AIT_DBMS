@@ -1,12 +1,15 @@
 # Experiment 1.1 – Library Management System Database
 
 ## Student Information
--**Name**: Aryan Dahiya
--**UID**: 24BAI70697
--**Branch**: AIT-CSE(AIML)
--**Section**: 24AIT-KRG2
--**Semester**: 4
--**Subject**: DataBase Management System
+
+| Field    | Details        |
+|---------|----------------|
+| Name    | Aryan Dahiya   |
+| UID     | 24BAI70697     |
+| Branch  | AIT-CSE (AIML) |
+| Section | 24AIT-KRG2     |
+| Semester| 4              |
+
 
 
 ## Experiment
