@@ -18,11 +18,10 @@ The aim of this experiment is to practice writing SQL SELECT statements with fil
 - Database: Oracle XE or PostgreSQL (PgAdmin)
 
 ## Practical / Experiment Steps
-Step 1: Average salary of employees by department.
-Step 2: Average salary by department for employees with salary > 20,000.
-Step 3: Departments where average salary > 30,000.
-Step 4: Departments with average salary > 30,000 for salary > 20,000, sorted in descending order.
-Screenshots of query execution (s1 to s4) are attached in order.
+- Display the department name and the average salary of employees for each department.
+- Consider only those employees whose salary is greater than 20,000.
+- Display only those departments where the average salary is greater than 30,000.
+- Arrange the final output in descending order of average salary.
 
 ## Procedure of the Experiment
 1. Start the system and log in to the computer.  
