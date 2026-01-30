@@ -80,4 +80,6 @@ END $$;
 
 ### Step 1 and 2 Output
 
+<img width="1123" height="379" alt="image" src="https://github.com/user-attachments/assets/e92b7bb5-ca1e-4173-b7d8-7d764a32ddeb" />
+
 
