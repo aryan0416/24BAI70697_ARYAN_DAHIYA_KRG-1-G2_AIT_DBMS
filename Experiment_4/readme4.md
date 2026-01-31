@@ -1,187 +1,148 @@
-# **EXPERIMENT 3 – Conditional Logic in PostgreSQL**
+
+# **DBMS Experiment 4 – Conditional Control Statements in PL/SQL**
 
 **Student Name:** Aryan Dahiya
 **UID:** 24BAI70697
-**Branch:** AIT-CSE (AIML)
-**Section/Group:** 24AIT_KRG2
+**Branch:** AIT-CSE-AIML
+**Section/Group:** 24AIT_KRG-G2
 **Semester:** 4
-**Subject:** Database Management System
-**Subject Code:** 24CSH-298
+**Subject:** Database Management System (DBMS) 
 
 ---
 
-## **Aim**
+## **AIM**
 
-To implement conditional decision-making logic in PostgreSQL using **IF–ELSE constructs** and **CASE expressions** for classification, validation, and rule-based data processing. 
-
----
-
-## **Tools Used**
-
-* PostgreSQL 
+To design and implement PL/SQL programs using conditional control statements such as **IF–ELSE**, **IF–ELSIF–ELSE**, **ELSIF ladder**, and **CASE constructs** to control execution flow based on logical conditions and analyze decision-making capabilities in PL/SQL blocks. 
 
 ---
 
-## **Objectives**
+## **SOFTWARE REQUIREMENTS**
 
-* Understand conditional execution in SQL
-* Implement decision-making logic using CASE
-* Simulate real-world rule validation
-* Classify data using multiple conditions
-* Strengthen SQL logic for backend systems & interviews 
+* Database Management System: **PostgreSQL / Oracle Database Express Edition**
+* Database Administration Tool: **pgAdmin** 
 
 ---
 
-## **Theory**
+## **OBJECTIVES**
 
-Conditional logic helps databases validate, categorize, and transform data based on business rules. PostgreSQL supports this through:
-
-* **CASE Expressions** → Used in SELECT, UPDATE, INSERT
-* **IF–ELSE Constructs** → Used in PL/pgSQL blocks
-
-Used for:
-
-* Data classification
-* Violation detection
-* Status mapping
-* Business rule enforcement 
+* Understand and implement conditional control statements in PL/SQL
+* Analyze decision-making using IF–ELSE, ELSIF ladder, and CASE statements
+* Enhance logical thinking using PL/SQL blocks 
 
 ---
 
-## **Practical Implementation**
+## **PROBLEM STATEMENTS & PROGRAMS**
 
-### **Prerequisite Setup**
+### **1. IF–ELSE Statement**
+
+**Problem:** Check whether a given number is positive or non-positive.
 
 ```sql
-CREATE TABLE schema_violations (
- id SERIAL PRIMARY KEY,
- schema_name VARCHAR(50),
- violation_count INT
-);
-
-INSERT INTO schema_violations (schema_name, violation_count) VALUES
-('Finance', 0),
-('HR', 2),
-('Sales', 5),
-('Security', 9),
-('Admin', 1);
-```
-
----
-<img width="1090" height="352" alt="image" src="https://github.com/user-attachments/assets/55f85f94-70b9-442f-b2e6-780f9ab7c9f1" />
-### **Step 1: Classifying Data Using CASE**
-
-```sql
-SELECT 
- schema_name,
- violation_count,
- CASE
-  WHEN violation_count = 0 THEN 'No Violation'
-  WHEN violation_count BETWEEN 1 AND 3 THEN 'Minor Violation'
-  WHEN violation_count BETWEEN 4 AND 7 THEN 'Moderate Violation'
-  ELSE 'Critical Violation'
- END AS violation_status
-FROM schema_violations;
-```
-
-<img width="1090" height="402" alt="image" src="https://github.com/user-attachments/assets/db7c4e8b-2cea-4c80-963c-426b2ac9bb36" />
-
----
-
-### **Step 2: CASE Logic in Updates**
-
-```sql
-ALTER TABLE schema_violations ADD COLUMN approval_status VARCHAR(20);
-
-UPDATE schema_violations
-SET approval_status =
- CASE
-  WHEN violation_count = 0 THEN 'Approved'
-  WHEN violation_count BETWEEN 1 AND 5 THEN 'Needs Review'
-  ELSE 'Rejected'
- END;
-```
-
----
-<img width="989" height="353" alt="image" src="https://github.com/user-attachments/assets/8d9581cd-d3f0-48af-b148-ee398cbb6c43" />
-
-### **Step 3: IF–ELSE Using PL/pgSQL**
-
-```sql
-DO $$
 DECLARE
- v_count INT := 4;
+ num NUMBER := -5;
 BEGIN
- IF v_count = 0 THEN
-  RAISE NOTICE 'System is clean.';
- ELSIF v_count <= 5 THEN
-  RAISE NOTICE 'System has minor issues.';
+ IF num > 0 THEN
+   DBMS_OUTPUT.PUT_LINE('The number is Positive');
  ELSE
-  RAISE NOTICE 'System has critical violations!';
+   DBMS_OUTPUT.PUT_LINE('The number is Non-Positive');
  END IF;
-END $$;
+END;
 ```
 
 ---
-<img width="1090" height="290" alt="image" src="https://github.com/user-attachments/assets/8f833409-4347-4afe-9c0c-642b0280e301" />
 
-### **Step 4: Grading System**
+### **2. IF–ELSIF–ELSE Statement**
+
+**Problem:** Evaluate the grade of a student based on marks.
 
 ```sql
-CREATE TABLE students (
- name VARCHAR(50),
- marks INT
-);
-
-INSERT INTO students VALUES
-('Aryan', 92),
-('Riya', 75),
-('Karan', 61),
-('Megha', 48);
-
-SELECT name, marks,
- CASE
-  WHEN marks >= 90 THEN 'A Grade'
-  WHEN marks >= 70 THEN 'B Grade'
-  WHEN marks >= 50 THEN 'C Grade'
-  ELSE 'Fail'
- END AS grade
-FROM students;
+DECLARE
+ marks NUMBER := 78;
+BEGIN
+ IF marks >= 90 THEN
+   DBMS_OUTPUT.PUT_LINE('Grade: A');
+ ELSIF marks >= 75 THEN
+   DBMS_OUTPUT.PUT_LINE('Grade: B');
+ ELSIF marks >= 60 THEN
+   DBMS_OUTPUT.PUT_LINE('Grade: C');
+ ELSE
+   DBMS_OUTPUT.PUT_LINE('Grade: Fail');
+ END IF;
+END;
 ```
 
 ---
-<img width="1090" height="386" alt="image" src="https://github.com/user-attachments/assets/6e6722a8-11d9-4280-8dc6-b1e7d06ff27b" />
 
-### **Step 5: CASE for Custom Sorting**
+### **3. ELSIF Ladder**
+
+**Problem:** Determine student performance status based on marks.
 
 ```sql
-SELECT schema_name, violation_count
-FROM schema_violations
-ORDER BY
- CASE
-  WHEN violation_count = 0 THEN 1
-  WHEN violation_count BETWEEN 1 AND 3 THEN 2
-  WHEN violation_count BETWEEN 4 AND 7 THEN 3
-  ELSE 4
- END;
+DECLARE
+ marks NUMBER := 82;
+BEGIN
+ IF marks >= 85 THEN
+   DBMS_OUTPUT.PUT_LINE('Performance: Excellent');
+ ELSIF marks >= 70 THEN
+   DBMS_OUTPUT.PUT_LINE('Performance: Very Good');
+ ELSIF marks >= 55 THEN
+   DBMS_OUTPUT.PUT_LINE('Performance: Good');
+ ELSIF marks >= 40 THEN
+   DBMS_OUTPUT.PUT_LINE('Performance: Average');
+ ELSE
+   DBMS_OUTPUT.PUT_LINE('Performance: Poor');
+ END IF;
+END;
 ```
 
 ---
-<img width="990" height="315" alt="image" src="https://github.com/user-attachments/assets/c8912d5e-180a-46b5-8437-1417f71b4b02" />
 
-## **Course Outcome**
+### **4. CASE Statement**
 
-Students learn how to apply **CASE** and **IF–ELSE** logic in PostgreSQL for:
+**Problem:** Display day name based on day number.
 
-* Backend systems
-* Analytics
-* Compliance reporting
-* Technical interviews 
+```sql
+DECLARE
+ day_num NUMBER := 3;
+ day_name VARCHAR2(20);
+BEGIN
+ CASE day_num
+   WHEN 1 THEN day_name := 'Sunday';
+   WHEN 2 THEN day_name := 'Monday';
+   WHEN 3 THEN day_name := 'Tuesday';
+   WHEN 4 THEN day_name := 'Wednesday';
+   WHEN 5 THEN day_name := 'Thursday';
+   WHEN 6 THEN day_name := 'Friday';
+   WHEN 7 THEN day_name := 'Saturday';
+   ELSE day_name := 'Invalid Day Number';
+ END CASE;
+
+ DBMS_OUTPUT.PUT_LINE('Day is: ' || day_name);
+END;
+```
 
 ---
 
-## **Result**
+## **LEARNING OUTCOMES**
 
-Conditional logic using CASE and IF–ELSE was successfully implemented for classification, approval automation, grading systems, and custom sorting in PostgreSQL. 
+1. Understood conditional control statements in PL/SQL
+2. Applied IF–ELSE and IF–ELSIF–ELSE for decision-making
+3. Implemented ELSIF ladder for multiple conditions
+4. Used CASE statements for simplified logic
+5. Improved logical reasoning and procedural programming skills 
 
 ---
+
+## **CONCLUSION**
+
+This experiment provided hands-on experience with conditional control statements in PL/SQL. The use of IF–ELSE, ELSIF ladder, and CASE statements improved understanding of decision-making mechanisms and control flow within PL/SQL programs. 
+
+### **SCREENSHOTS***
+
+<img width="1025" height="747" alt="Screenshot 2026-01-31 102827" src="https://github.com/user-attachments/assets/38c1a7fc-54e4-423f-b2dd-9e5f9aecfbe7" />
+<img width="1015" height="869" alt="Screenshot 2026-01-31 102915" src="https://github.com/user-attachments/assets/94cb9f4b-628d-44d0-a3ed-e8f1bc5533a0" />
+<img width="1036" height="870" alt="Screenshot 2026-01-31 102959" src="https://github.com/user-attachments/assets/20aa6a3e-de50-4a9d-a9f8-aa5a11423ad4" />
+<img width="1038" height="873" alt="Screenshot 2026-01-31 103113" src="https://github.com/user-attachments/assets/9fed92b4-ceaa-4159-abd5-a0662d508f1f" />
+
+
+
