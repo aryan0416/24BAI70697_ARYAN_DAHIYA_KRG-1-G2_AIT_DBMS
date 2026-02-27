@@ -181,7 +181,7 @@ END;
 
 # OUTPUT
 
-### Sample Output
+
 ```
 Cursor Opened Successfully
 Employee: Amit | Salary: 27500
