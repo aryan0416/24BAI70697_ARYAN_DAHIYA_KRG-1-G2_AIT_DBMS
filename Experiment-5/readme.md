@@ -48,8 +48,7 @@ CREATE TABLE employee (
     salary INT
 );
 
-# EXPERIMENT 5: SQL Conditional Logic (Odd & Even Values) – PostgreSQL (pgAdmin)
-
+```
 ## Step 2: Insert Sample Data
 
 ```sql
@@ -136,3 +135,5 @@ This technique helps in categorizing numerical data efficiently and is useful in
 - Apply conditional logic using WHERE and CASE statements.
 - Classify numerical data as odd or even.
 - Improve SQL data filtering and reporting skills.
+
+## Screenshot
