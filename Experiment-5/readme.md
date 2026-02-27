@@ -137,3 +137,17 @@ This technique helps in categorizing numerical data efficiently and is useful in
 - Improve SQL data filtering and reporting skills.
 
 ## Screenshot
+
+<img width="1082" height="860" alt="Screenshot 2026-02-27 103344" src="https://github.com/user-attachments/assets/44a7d286-c04b-499d-9d60-c23cb96eb5b7" />
+
+<img width="1121" height="1013" alt="Screenshot 2026-02-27 103427" src="https://github.com/user-attachments/assets/05b2da7a-8aae-476b-8759-30bea998fdd4" />
+
+<img width="1090" height="889" alt="Screenshot 2026-02-27 103451" src="https://github.com/user-attachments/assets/0161c19a-b882-4555-96db-482b97e8e0d6" />
+
+<img width="1078" height="705" alt="Screenshot 2026-02-27 103513" src="https://github.com/user-attachments/assets/cc30ccdb-ced2-4cbb-8f24-9ea7338d21da" />
+
+<img width="1103" height="889" alt="Screenshot 2026-02-27 103533" src="https://github.com/user-attachments/assets/2ddfcf5e-eeb9-4e82-a8fa-9041b36b0f03" />
+
+<img width="1101" height="890" alt="Screenshot 2026-02-27 103552" src="https://github.com/user-attachments/assets/d0256e8b-e332-4d4f-a2c7-163578224454" />
+
+
