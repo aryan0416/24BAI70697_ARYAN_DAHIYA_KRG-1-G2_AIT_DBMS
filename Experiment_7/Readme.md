@@ -75,23 +75,30 @@ In large-scale enterprise systems, frequent execution of complex queries can sig
 ## Step-wise Output
 **Step 1 – Create Base Tables**  
 
+<img width="1439" height="909" alt="image" src="https://github.com/user-attachments/assets/0ddbfb01-1c1f-4823-a195-01b4c27764a0" />
 
 **Step 2 – Insert Sample Data**  
+<img width="1422" height="912" alt="image" src="https://github.com/user-attachments/assets/0faa40c7-db1a-40ba-9426-36fec3cf2146" />
 
 
 **Step 3 – Create Simple View**  
 
+<img width="1448" height="901" alt="image" src="https://github.com/user-attachments/assets/1264b8f8-bd4a-4060-a2ef-0b310930dde5" />
 
 **Step 4 – Create Complex View**  
+<img width="1420" height="914" alt="image" src="https://github.com/user-attachments/assets/e3bd988b-ef66-40ce-82c0-191659f61278" />
 
 
 **Step 5 – Create Materialized View**  
- 
+ <img width="1428" height="906" alt="image" src="https://github.com/user-attachments/assets/76282119-5a78-4328-bd36-0186382e7e5d" />
+
 
 **Step 6 – Execute Queries on Views**  
 
+<img width="1416" height="912" alt="image" src="https://github.com/user-attachments/assets/358fb66f-bf00-4acb-878a-c512aabf158e" />
 
 **Step 7 – Compare Performance**  
+<img width="1428" height="914" alt="image" src="https://github.com/user-attachments/assets/5de7e4e1-8573-4acb-9bec-f6b113e218d5" />
 
 
 ---
