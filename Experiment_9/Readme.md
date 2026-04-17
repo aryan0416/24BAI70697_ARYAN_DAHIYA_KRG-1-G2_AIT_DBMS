@@ -68,17 +68,18 @@ Table: employee (id, name, gender, salary)
 ## Step-wise Output  
 
 ### Step 1 – Create Employee Table  
-
+![Employee Table Creation](Screenshots/s1.png)
 
 ### Step 2 – Insert Sample Data  
-
+![Insert Sample Data](Screenshots/s2.png)
 
 ### Step 3 – Create Package Specification  
-
+![Create Package Specification](Screenshots/s3.png)
 ### Step 4 – Create Package Body  
-
+![Create Package Body](Screenshots/s4.png)
 
 ### Step 5 – Execute Package Procedure  
+![Execute Package Procedure](Screenshots/s5.png)
 
 
 ---
